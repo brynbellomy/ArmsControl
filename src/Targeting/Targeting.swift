@@ -21,49 +21,6 @@ public protocol ITargetableRoot: class
 }
 
 
-public struct StaticTargeting: ITargeting
-{
-    let targets: [SKNode]
-
-    public init(targets t:[SKNode])  { targets = t }
-    public init(targets t:SKNode...) { targets = t }
-
-    public func getTargets() -> [SKNode] {
-        return targets
-    }
-}
-
-
-public struct AreaEffectTargeting: ITargeting
-{
-    public var targetableRoot: ITargetableRoot
-
-//    public let center: CGPoint
-    public let radius: CGFloat
-    public let positionClosure: () -> CGPoint
-
-    public init(radius r:CGFloat, targetableRoot tr: ITargetableRoot, positionClosure pc: () -> CGPoint)
-    {
-//        center = c
-        radius = r
-        targetableRoot = tr
-        positionClosure = pc
-    }
-
-    public func getTargets() -> [SKNode]
-    {
-        let center = positionClosure()
-        let radius = self.radius
-
-        let targets = targetableRoot.getTargetableNodes() |> select {
-            return $0.position.distanceTo(center) <= radius
-        }
-
-//        lllog(.Error, "Area Effect :: (radius = \(radius) / center = \(center.bk_shortDescription)) close nodes = \(targets)")
-        return targets
-    }
-}
-
 
 
 
