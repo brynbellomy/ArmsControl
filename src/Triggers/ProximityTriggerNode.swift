@@ -16,10 +16,7 @@ import SwiftBitmask
 import SwiftConfig
 import LlamaKit
 import Signals
-
-
-public protocol ITriggerCategoryType: IBitmaskRepresentable, IConfigRepresentable {
-}
+import SwiftLogger
 
 
 public class ProximityTriggerNode
@@ -39,6 +36,14 @@ public class ProximityTriggerNode
 
     private var bodiesInProximity = [SKPhysicsBody]()
 
+    public init(radius:CGFloat, triggerCategories trig:Bitmask<TriggerCategory>)
+    {
+        triggerCategories = trig
+
+        super.init()
+
+        physicsBody = SKPhysicsBody(circleOfRadius: radius)
+    }
     public init(physicsBody body:SKPhysicsBody, triggerCategories trig:Bitmask<TriggerCategory>)
     {
         triggerCategories   = trig
@@ -72,6 +77,7 @@ public class ProximityTriggerNode
     private func didBeginContact(contact:SKPhysicsContact) {
         let otherBody = GameObjects.bodyOtherThan(physicsBody!)(contact:contact)
         bodiesInProximity.append(otherBody)
+        lllog(.Error, "bodiesInProximity = \(bodiesInProximity)")
         signal.fire((otherBody:otherBody, contact:contact))
     }
 
@@ -81,6 +87,7 @@ public class ProximityTriggerNode
 
         if let index = find(bodiesInProximity, otherBody) {
             bodiesInProximity.removeAtIndex(index)
+            lllog(.Error, "bodiesInProximity = \(bodiesInProximity)")
         }
         else { fatalError("could not find body with whom i'm ending contact (ProximityTriggerNode)") }
 

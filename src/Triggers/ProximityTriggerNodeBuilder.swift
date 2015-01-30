@@ -36,8 +36,8 @@ public struct ProximityTriggerNodeBuilder <T: ITriggerCategoryType where T.Bitma
 
 
 private func buildNode <T: ITriggerCategoryType where T.BitmaskRawType == UInt32>
-    (physicsBody:SKPhysicsBody)
-    (triggerCategories:Bitmask<T>) -> ProximityTriggerNode<T> {
+    (physicsBody:SKPhysicsBody) (triggerCategories:Bitmask<T>) -> ProximityTriggerNode<T>
+{
     return ProximityTriggerNode<T>(physicsBody: physicsBody, triggerCategories: triggerCategories)
 }
 

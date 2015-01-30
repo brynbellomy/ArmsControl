@@ -16,6 +16,12 @@ import Signals
 //
 //
 
+/** A bitmask value indicating what types of nodes can trigger a given trigger. */
+public protocol ITriggerCategoryType: IBitmaskRepresentable, IConfigRepresentable {
+}
+
+
+
 public protocol ITrigger
 {
     typealias SignalType

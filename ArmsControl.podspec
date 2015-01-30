@@ -9,15 +9,16 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
-  s.source_files = 'Classes/*.swift', 'Classes/**/*.swift'
+  s.source_files = 'src/*.swift', 'src/**/*.swift'
   s.requires_arc = true
 
   s.dependency 'LlamaKit'
-  s.dependency 'Funky'
+  s.dependency 'Funky', '0.1.2'
   s.dependency 'BrynSwift'
   s.dependency 'SwiftDataStructures'
   s.dependency 'SwiftBitmask'
   s.dependency 'SwiftConfig'
+  s.dependency 'GameObjects'
   s.dependency 'UpdateTimer'
   # s.dependency 'Starscream'
   # s.dependency 'ReactiveCocoaSwift'
