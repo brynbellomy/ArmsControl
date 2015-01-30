@@ -46,14 +46,6 @@ public struct Payload
 
 
 
-//func example()
-//{
-//    let areaTargeting = AreaEffectTargeting(center:projectile.position, radius:10.0) { mapScene.gameObjectNodes }
-//    let damageEffect  = HPEffect(deltaHP:-10)
-//    let payload       = Payload(targeting:areaTargeting, effect:damageEffect, duration:.Momentary)
-//    scene.addPayload(payload)
-//}
-
 
 
 
