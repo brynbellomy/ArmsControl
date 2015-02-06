@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33D9D8BA3665D8E8CEF41746 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046B021030FA775220A875CC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		53F2E7FA774A26220002ABA0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046B021030FA775220A875CC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C524DCE21A7B8E8D00448C07 /* DynamicTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524DCE11A7B8E8D00448C07 /* DynamicTargeting.swift */; };
 		C53B17A51A5FE8010088BCFD /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53B17A01A5FE8010088BCFD /* Box.framework */; };
 		C53B17A61A5FE8010088BCFD /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53B17A11A5FE8010088BCFD /* Either.framework */; };
 		C53B17A71A5FE8010088BCFD /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53B17A21A5FE8010088BCFD /* LlamaKit.framework */; };
@@ -17,13 +18,17 @@
 		C5446F241A5F35F000DD00E7 /* ArmsControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5446F231A5F35F000DD00E7 /* ArmsControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5446F2A1A5F35F000DD00E7 /* ArmsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5446F1E1A5F35F000DD00E7 /* ArmsControl.framework */; };
 		C5446F311A5F35F000DD00E7 /* ArmsControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5446F301A5F35F000DD00E7 /* ArmsControlTests.swift */; };
-		C570874B1A663747005D4912 /* PayloadableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57087441A663747005D4912 /* PayloadableComponent.swift */; };
-		C5C1764A1A6639080062168F /* HPPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176431A6639080062168F /* HPPayload.swift */; };
-		C5C1764B1A6639080062168F /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176441A6639080062168F /* Payload.swift */; };
-		C5C1764C1A6639080062168F /* ProximityTriggerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176461A6639080062168F /* ProximityTriggerNode.swift */; };
-		C5C1764D1A6639080062168F /* ProximityTriggerNodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176471A6639080062168F /* ProximityTriggerNodeBuilder.swift */; };
-		C5C1764E1A6639080062168F /* TimerTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176481A6639080062168F /* TimerTrigger.swift */; };
-		C5C1764F1A6639080062168F /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C176491A6639080062168F /* Trigger.swift */; };
+		C55A43D51A7B6EEB007AFD06 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43C81A7B6EEB007AFD06 /* Effect.swift */; };
+		C55A43D61A7B6EEB007AFD06 /* HPEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43C91A7B6EEB007AFD06 /* HPEffect.swift */; };
+		C55A43D71A7B6EEB007AFD06 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43CA1A7B6EEB007AFD06 /* Payload.swift */; };
+		C55A43D81A7B6EEB007AFD06 /* PayloadableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43CB1A7B6EEB007AFD06 /* PayloadableComponent.swift */; };
+		C55A43D91A7B6EEB007AFD06 /* AreaEffectTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43CD1A7B6EEB007AFD06 /* AreaEffectTargeting.swift */; };
+		C55A43DA1A7B6EEB007AFD06 /* StaticTargeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43CE1A7B6EEB007AFD06 /* StaticTargeting.swift */; };
+		C55A43DB1A7B6EEB007AFD06 /* Targeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43CF1A7B6EEB007AFD06 /* Targeting.swift */; };
+		C55A43DC1A7B6EEB007AFD06 /* ProximityTriggerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43D11A7B6EEB007AFD06 /* ProximityTriggerNode.swift */; };
+		C55A43DD1A7B6EEB007AFD06 /* ProximityTriggerNodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43D21A7B6EEB007AFD06 /* ProximityTriggerNodeBuilder.swift */; };
+		C55A43DE1A7B6EEB007AFD06 /* TimerTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43D31A7B6EEB007AFD06 /* TimerTrigger.swift */; };
+		C55A43DF1A7B6EEB007AFD06 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A43D41A7B6EEB007AFD06 /* Trigger.swift */; };
 		CEE0D2F0BF4C3C45863696FB /* Pods_ArmsControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE74B1DF99E53186F480F7E /* Pods_ArmsControlTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,7 @@
 		2CE74B1DF99E53186F480F7E /* Pods_ArmsControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArmsControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EEBBBCF746D5BF95A79D40D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1B07BE343C3ECBD57445C31 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C524DCE11A7B8E8D00448C07 /* DynamicTargeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTargeting.swift; sourceTree = "<group>"; };
 		C53B17A01A5FE8010088BCFD /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/Mac/Box.framework; sourceTree = "<group>"; };
 		C53B17A11A5FE8010088BCFD /* Either.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Either.framework; path = Carthage/Build/Mac/Either.framework; sourceTree = "<group>"; };
 		C53B17A21A5FE8010088BCFD /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/Mac/LlamaKit.framework; sourceTree = "<group>"; };
@@ -53,13 +59,17 @@
 		C5446F291A5F35F000DD00E7 /* ArmsControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArmsControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5446F2F1A5F35F000DD00E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5446F301A5F35F000DD00E7 /* ArmsControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmsControlTests.swift; sourceTree = "<group>"; };
-		C57087441A663747005D4912 /* PayloadableComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadableComponent.swift; sourceTree = "<group>"; };
-		C5C176431A6639080062168F /* HPPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPPayload.swift; sourceTree = "<group>"; };
-		C5C176441A6639080062168F /* Payload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
-		C5C176461A6639080062168F /* ProximityTriggerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityTriggerNode.swift; sourceTree = "<group>"; };
-		C5C176471A6639080062168F /* ProximityTriggerNodeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityTriggerNodeBuilder.swift; sourceTree = "<group>"; };
-		C5C176481A6639080062168F /* TimerTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTrigger.swift; sourceTree = "<group>"; };
-		C5C176491A6639080062168F /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
+		C55A43C81A7B6EEB007AFD06 /* Effect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		C55A43C91A7B6EEB007AFD06 /* HPEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPEffect.swift; sourceTree = "<group>"; };
+		C55A43CA1A7B6EEB007AFD06 /* Payload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		C55A43CB1A7B6EEB007AFD06 /* PayloadableComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadableComponent.swift; sourceTree = "<group>"; };
+		C55A43CD1A7B6EEB007AFD06 /* AreaEffectTargeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaEffectTargeting.swift; sourceTree = "<group>"; };
+		C55A43CE1A7B6EEB007AFD06 /* StaticTargeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTargeting.swift; sourceTree = "<group>"; };
+		C55A43CF1A7B6EEB007AFD06 /* Targeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Targeting.swift; sourceTree = "<group>"; };
+		C55A43D11A7B6EEB007AFD06 /* ProximityTriggerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityTriggerNode.swift; sourceTree = "<group>"; };
+		C55A43D21A7B6EEB007AFD06 /* ProximityTriggerNodeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityTriggerNodeBuilder.swift; sourceTree = "<group>"; };
+		C55A43D31A7B6EEB007AFD06 /* TimerTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTrigger.swift; sourceTree = "<group>"; };
+		C55A43D41A7B6EEB007AFD06 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +125,7 @@
 		C5446F141A5F35F000DD00E7 = {
 			isa = PBXGroup;
 			children = (
-				C5446F3A1A5F3DDC00DD00E7 /* Classes */,
+				C55A43C61A7B6EEB007AFD06 /* src */,
 				C5446F201A5F35F000DD00E7 /* ArmsControl */,
 				C5446F2D1A5F35F000DD00E7 /* ArmsControlTests */,
 				C5446F1F1A5F35F000DD00E7 /* Products */,
@@ -167,32 +177,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C5446F3A1A5F3DDC00DD00E7 /* Classes */ = {
+		C55A43C61A7B6EEB007AFD06 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C5C176421A6639080062168F /* Payloads */,
-				C5C176451A6639080062168F /* Triggers */,
-				C57087441A663747005D4912 /* PayloadableComponent.swift */,
+				C55A43CA1A7B6EEB007AFD06 /* Payload.swift */,
+				C55A43CB1A7B6EEB007AFD06 /* PayloadableComponent.swift */,
+				C55A43C71A7B6EEB007AFD06 /* Effects */,
+				C55A43CC1A7B6EEB007AFD06 /* Targeting */,
+				C55A43D01A7B6EEB007AFD06 /* Triggers */,
 			);
-			path = Classes;
+			path = src;
 			sourceTree = "<group>";
 		};
-		C5C176421A6639080062168F /* Payloads */ = {
+		C55A43C71A7B6EEB007AFD06 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				C5C176431A6639080062168F /* HPPayload.swift */,
-				C5C176441A6639080062168F /* Payload.swift */,
+				C55A43C81A7B6EEB007AFD06 /* Effect.swift */,
+				C55A43C91A7B6EEB007AFD06 /* HPEffect.swift */,
 			);
-			path = Payloads;
+			path = Effects;
 			sourceTree = "<group>";
 		};
-		C5C176451A6639080062168F /* Triggers */ = {
+		C55A43CC1A7B6EEB007AFD06 /* Targeting */ = {
 			isa = PBXGroup;
 			children = (
-				C5C176461A6639080062168F /* ProximityTriggerNode.swift */,
-				C5C176471A6639080062168F /* ProximityTriggerNodeBuilder.swift */,
-				C5C176481A6639080062168F /* TimerTrigger.swift */,
-				C5C176491A6639080062168F /* Trigger.swift */,
+				C55A43CF1A7B6EEB007AFD06 /* Targeting.swift */,
+				C55A43CE1A7B6EEB007AFD06 /* StaticTargeting.swift */,
+				C524DCE11A7B8E8D00448C07 /* DynamicTargeting.swift */,
+				C55A43CD1A7B6EEB007AFD06 /* AreaEffectTargeting.swift */,
+			);
+			path = Targeting;
+			sourceTree = "<group>";
+		};
+		C55A43D01A7B6EEB007AFD06 /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				C55A43D11A7B6EEB007AFD06 /* ProximityTriggerNode.swift */,
+				C55A43D21A7B6EEB007AFD06 /* ProximityTriggerNodeBuilder.swift */,
+				C55A43D31A7B6EEB007AFD06 /* TimerTrigger.swift */,
+				C55A43D41A7B6EEB007AFD06 /* Trigger.swift */,
 			);
 			path = Triggers;
 			sourceTree = "<group>";
@@ -403,13 +426,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C1764E1A6639080062168F /* TimerTrigger.swift in Sources */,
-				C5C1764D1A6639080062168F /* ProximityTriggerNodeBuilder.swift in Sources */,
-				C5C1764C1A6639080062168F /* ProximityTriggerNode.swift in Sources */,
-				C5C1764B1A6639080062168F /* Payload.swift in Sources */,
-				C5C1764F1A6639080062168F /* Trigger.swift in Sources */,
-				C5C1764A1A6639080062168F /* HPPayload.swift in Sources */,
-				C570874B1A663747005D4912 /* PayloadableComponent.swift in Sources */,
+				C55A43DE1A7B6EEB007AFD06 /* TimerTrigger.swift in Sources */,
+				C55A43D71A7B6EEB007AFD06 /* Payload.swift in Sources */,
+				C55A43D61A7B6EEB007AFD06 /* HPEffect.swift in Sources */,
+				C55A43D81A7B6EEB007AFD06 /* PayloadableComponent.swift in Sources */,
+				C55A43D91A7B6EEB007AFD06 /* AreaEffectTargeting.swift in Sources */,
+				C55A43DC1A7B6EEB007AFD06 /* ProximityTriggerNode.swift in Sources */,
+				C55A43DF1A7B6EEB007AFD06 /* Trigger.swift in Sources */,
+				C55A43D51A7B6EEB007AFD06 /* Effect.swift in Sources */,
+				C55A43DA1A7B6EEB007AFD06 /* StaticTargeting.swift in Sources */,
+				C55A43DB1A7B6EEB007AFD06 /* Targeting.swift in Sources */,
+				C55A43DD1A7B6EEB007AFD06 /* ProximityTriggerNodeBuilder.swift in Sources */,
+				C524DCE21A7B8E8D00448C07 /* DynamicTargeting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

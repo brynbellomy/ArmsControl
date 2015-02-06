@@ -17,6 +17,12 @@ public enum TimeInterval
 
 public protocol IEffectType: class
 {
+    /**
+        Executes the effect on the given `targets`.
+
+        :param: timeInterval Allows effects to alter their behavior depending on whether they are executed instantaneously or over a period of time.
+        :param: targets The targets upon which the effect should attempt to execute.
+    */
     func execute(timeInterval:TimeInterval, targets:[SKNode])
 }
 

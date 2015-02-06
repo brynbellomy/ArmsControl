@@ -6,22 +6,24 @@
 //  Copyright (c) 2014 bryn austin bellomy. All rights reserved.
 //
 
+import Foundation
 import SpriteKit
-import Funky
-import SwiftLogger
 
 
+/**
+    Targets nodes within a certain circular radius of a given point.
+ */
 public struct AreaEffectTargeting: ITargeting
 {
-    public var targetableRoot: ITargetableRoot
+    public var targetingSearchRoot: ITargetingSearchRoot
 
     public let radius: CGFloat
     public let positionClosure: () -> CGPoint
 
-    public init(radius r:CGFloat, targetableRoot tr: ITargetableRoot, positionClosure pc: () -> CGPoint)
+    public init(radius r:CGFloat, targetingSearchRoot tr: ITargetingSearchRoot, positionClosure pc: () -> CGPoint)
     {
         radius = r
-        targetableRoot = tr
+        targetingSearchRoot = tr
         positionClosure = pc
     }
 
@@ -30,11 +32,9 @@ public struct AreaEffectTargeting: ITargeting
         let center = positionClosure()
         let radius = self.radius
 
-        let targets = targetableRoot.getTargetableNodes() |> select {
+        return targetingSearchRoot.getTargetableNodes().filter {
             return $0.position.distanceTo(center) <= radius
         }
-
-        return targets
     }
 }
 

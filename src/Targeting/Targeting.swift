@@ -14,7 +14,7 @@ public protocol ITargeting {
     func getTargets() -> [SKNode]
 }
 
-public protocol ITargetableRoot: class
+public protocol ITargetingSearchRoot: class
 {
     /** This function allows the scene to choose which nodes are relevant for targeting, excluding anything that cannot be affected by payloads, anything offscreen, etc. */
     func getTargetableNodes() -> [SKNode]
