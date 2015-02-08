@@ -2,16 +2,16 @@
 PRODUCT_NAME=ArmsControl
 XCTOOL=/usr/local/bin/xctool -scheme $(PRODUCT_NAME) -workspace $(PRODUCT_NAME).xcworkspace -reporter pretty
 
-DOCS_OUTPUT_DIR=~/tmp/docs/$(PRODUCT_NAME)
+DOCS_OUTPUT_DIR=~/projects/_swift/_docs/$(PRODUCT_NAME)
 GITHUB_URL=https://github.com/brynbellomy/$(PRODUCT_NAME)
 PODSPEC_PATH=./$(PRODUCT_NAME).podspec
 SRC_ROOT=./
 
 all: build
 
-docs: $(DOCS_OUTPUT_DIR)
+docs: .FORCE-DOCS
 
-$(DOCS_OUTPUT_DIR):
+.FORCE-DOCS:
 	mkdir -p $(DOCS_OUTPUT_DIR)
 
 	jazzy 	-o $(DOCS_OUTPUT_DIR) \
@@ -19,15 +19,10 @@ $(DOCS_OUTPUT_DIR):
 			-u 'https://github.com/brynbellomy' \
 			-m $(PRODUCT_NAME) \
 			-g $(GITHUB_URL) \
-			--podspec $(PODSPEC_PATH) \
 			--source-directory $(SRC_ROOT)
 
-	git checkout gh-pages
-	rm -rf ./*
-	cp -R $(DOCS_OUTPUT_DIR)/* ./
-	cp -R $(DOCS_OUTPUT_DIR)/*.* ./
-	rm -rf $(DOCS_OUTPUT_DIR)
 
+# --podspec $(PODSPEC_PATH) \
 
 build: build/Products/Debug/$(PRODUCT_NAME).framework
 
