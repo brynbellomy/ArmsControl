@@ -1,6 +1,0 @@
-framework module SwiftFlatUIColors {
-  umbrella header "Pods-ArmsControlTests-SwiftFlatUIColors-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-github "robrix/Box" "1.0.1"
-github "robrix/Either" "1.0.3"
-github "Carthage/LlamaKit" "carthage-0.1.1"
-github "LlamaKit/LlamaKit" "v0.5.0"
-github "robrix/Traversal" "0.0.1"
-github "ReactiveCocoa/ReactiveCocoa" "511f3188ef20de1befb2faba2c3dadbd77de6407"
