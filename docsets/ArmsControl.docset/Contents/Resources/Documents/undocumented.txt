@@ -1,0 +1,51 @@
+TimerTrigger.swift
+	public struct TimerTrigger: ITrigger
+	public var interval: NSTimeInterval
+	public let signal = Signal<NSTimeInterval>()
+	public init(interval i: NSTimeInterval, triggerOnce:Bool)
+	public mutating func update(currentTime:NSTimeInterval)
+Payload.swift
+	public struct Payload
+	let targeting: ITargeting
+	var effect:    IEffectType
+	let duration:  TimeInterval
+	var remaining: NSTimeInterval
+	public init(targeting t:ITargeting, effect e:IEffectType, duration d:TimeInterval)
+	public mutating func execute(timeSinceLastUpdate:NSTimeInterval)
+PayloadableComponent.swift
+	public protocol IPayloadable
+	var payloadableComponent: PayloadableComponent
+	public struct PayloadableComponent
+	public init()
+	public func addPayload (payload: Payload)
+	public func update(currentTime:NSTimeInterval)
+AreaEffectTargeting.swift
+	public var targetingSearchRoot: ITargetingSearchRoot
+	public let radius: CGFloat
+	public let positionClosure: () -> CGPoint
+	public init(radius r:CGFloat, targetingSearchRoot tr: ITargetingSearchRoot, positionClosure pc: () -> CGPoint)
+	public func getTargets() -> [SKNode]
+Trigger.swift
+	public protocol ITrigger
+	var signal: Signal<SignalType>
+Effect.swift
+	public enum TimeInterval
+	public protocol IEffectType: class
+	public class BlockEffect
+	public init(effectClosure ec:EffectClosure)
+	public func execute(timeInterval:TimeInterval, targets:[SKNode])
+StaticTargeting.swift
+	public struct StaticTargeting: ITargeting
+	let targets: [SKNode]
+	public init(targets t:[SKNode])
+	public init(targets t:SKNode...)
+	public func getTargets() -> [SKNode]
+Targeting.swift
+	public protocol ITargeting
+	func getTargets() -> [SKNode]
+	public protocol ITargetingSearchRoot: class
+DynamicTargeting.swift
+	public struct DynamicTargeting: ITargeting
+	let targetsClosure: () -> [SKNode]
+	public init(targetsClosure tc:() -> [SKNode])
+	public func getTargets() -> [SKNode]
